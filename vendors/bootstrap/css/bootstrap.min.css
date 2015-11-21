@@ -4666,7 +4666,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   border-bottom: 1px solid rgba(0, 0, 0, 0.6)
 }
 .panel-default {
-  border-color: rgba(0, 0, 0, 0.6)
+  border-color: rgba(0, 0, 0, 0.8)
 }
 .panel-default>.panel-heading {
   color: #c8c8c8;

@@ -8,14 +8,10 @@
 	<script type="text/javascript" src="vendors/bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="vendors/bootstrap/css/bootstrap.min.css">
 	<style>
-		.loginBackground {
-			background: url(resources/images/index_bg.jpg);
-			background-size: 100% 100%;
-			width: 100%;
-			height: 100%;
-			position: fixed;
-		}
 
+		body{
+			background-color: #ecf0f1;
+		}
 		h1 {
 			color: black;
 			font-size: 5em;
@@ -28,11 +24,21 @@
 			font-size: 1.75em;
 			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		}
+
+		.project-title{
+			color: black;
+			font-size: 1.4em;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-style: bold;
+			padding-top: 30px;
+			padding-left: 30px;
+		}
+
 	</style>
 </head>
 
 <body>
-	<div class="loginBackground">
+	<div>
 		<nav class="navbar-default">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -55,17 +61,27 @@
 
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<div class="blackFont">
-							<h1>HAVE YOUR LISTS ON THE GO</h1>
-							<h4>Access your lists anytime, anywhere. Its absolutely free</h4>
-
+							<p class = "project-title">Popular Projects</p>
 					</div>
+				</div>
 
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-body">A Basic Panel</div>
+					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="panel panel-default">
-  					<div class="panel-body">A Basic Panel</div>
+						<div class="panel-body">A Basic Panel</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-body">A Basic Panel</div>
 					</div>
 				</div>
 			</div>

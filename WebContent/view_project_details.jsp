@@ -28,6 +28,7 @@
 		status = prop.getStatus();
 		AccountDAO accountDAO = new MySQLAccountDAO();
 		Account account =  accountDAO.getProjectAccount(p.getProjectID());
+		author = "aklsdj";
 		author = account.getLastName() + ", " +account.getFirstName();
 	}
 	

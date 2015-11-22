@@ -16,13 +16,6 @@
 <%
  	ProjectDAO projectDAO = new MySQLProjectDAO();
 	Project[] projects = projectDAO.getAllProjects();
-	Project[][] projects2D = new Project[projects.length/4][4];
-	
-	int numRows = projects.length/4;
-	
-	for (int i = 0; i < projects.length; i++) {
-		projects2D[i / 4][i % 4] = projects[i];
-	}
 %>
 
 <nav class="navbar-default">
@@ -45,10 +38,9 @@
 			<!-- /.container-fluid -->
 </nav>
 <div class="container-fluid">
-	<% for (int i = 0; i < numRows; i++) { %>
 	<div class="row">
-		<% for (int j = 0; j < 4; j++) { 
-		   Project p = projects2D[i][j];
+		<% for (int i = 0; i < projects.length; i++) { 
+		   Project p = projects[i];
 		   String prodId = p.getProjectID();
 		%>
 		
@@ -93,7 +85,6 @@
 		<% } %>
 		
 	</div>
-	<% } %>
 </div>
 </body>
 </html>

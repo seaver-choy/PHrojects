@@ -5,11 +5,15 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+
 import phrojects.model.MySQLConnectionManager;
 import phrojects.model.interface_dao.ProjectDAO;
+import phrojects.model.objects.Account;
 import phrojects.model.objects.Government;
 import phrojects.model.objects.Project;
 import phrojects.model.objects.Proposal;
@@ -29,7 +33,7 @@ public class MySQLProjectDAO implements ProjectDAO {
 	}
 	
 	@Override
-	public void createProposedProject(Proposal p)
+	public void createProposedProject(Proposal p, Account a)
     {
         String sql = "INSERT INTO `projects` "
                 + "(`title`, `description`, `department`, `regions`, `project_type`)"
@@ -52,6 +56,14 @@ public class MySQLProjectDAO implements ProjectDAO {
                 + "PENDING_APPROVAL', '"
                 + p.getPriority() + "');";
         
+        stmt.execute(sql);
+        
+        sql = "INSERT INTO `account_has_projects` "
+        		+ "(`username`, `project_id`) "
+        		+ "VALUES ('"
+        		+ a.getUsername() + "', '"
+        		+ p.getProjectID() + "');";
+        System.out.println(sql);
         stmt.execute(sql);
         }catch(Exception e){
             e.printStackTrace();

@@ -2,6 +2,7 @@ package phrojects.model.interface_dao;
 
 import java.sql.SQLException;
 
+import phrojects.model.objects.Account;
 import phrojects.model.objects.Government;
 import phrojects.model.objects.Project;
 import phrojects.model.objects.Proposal;
@@ -18,5 +19,5 @@ public interface ProjectDAO {
 	//public void deleteProject(String project_id);
 	Project[] getBestProjects();
 	void createGovernmentProject(Government g);
-	void createProposedProject(Proposal p);
+	void createProposedProject(Proposal p, Account a);
 }   

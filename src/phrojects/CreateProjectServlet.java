@@ -8,10 +8,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-
+import phrojects.model.interface_dao.AccountDAO;
 import phrojects.model.interface_dao.ProjectDAO;
+import phrojects.model.mysql_dao.MySQLAccountDAO;
 import phrojects.model.mysql_dao.MySQLProjectDAO;
+import phrojects.model.objects.Account;
 import phrojects.model.objects.Proposal;
 
 /**
@@ -46,8 +49,14 @@ public class CreateProjectServlet extends HttpServlet {
 		proposal.setPriority(priority);
 		proposal.setRegions(regions);
 		
+		HttpSession session = request.getSession();
+		String username = session.getAttribute("username").toString();
+		AccountDAO accountDAO = new MySQLAccountDAO();
+		Account account = accountDAO.getAccount(username);
+		
+		
 		ProjectDAO projectDAO = new MySQLProjectDAO();
-		projectDAO.createProposedProject(proposal);
+		projectDAO.createProposedProject(proposal, account);
 		PrintWriter out = response.getWriter();
 
 		javax.servlet.RequestDispatcher rd = request.getRequestDispatcher("index.jsp");

@@ -1,0 +1,89 @@
+@CHARSET "UTF-8";
+
+
+body{
+	background-color: #ecf0f1;
+}
+
+h1 {
+	color: black;
+	font-size: 5em;
+	font-style: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h4 {
+	color: black;
+	font-size: 1.75em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.project-popular{
+	color: black;
+	font-size: 1.4em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: bold;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+.project-title{
+	color: black;
+	font-size: 0.8em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: bold;
+}
+
+.panel-body:hover {
+	background-color: grey;
+	
+}
+
+#project-details-name {
+	color: black;
+	font-size: 3em;
+	font-style: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#project-details-author {
+	color: black;
+	font-size: 1.5em;
+	font-style: italic;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#project-details-department {
+	color: black;
+	font-size: 2em;
+	font-style: normal;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#project-details-status {
+	color: black;
+	font-size: 2em;
+	font-style: normal;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#project-details-description {
+	color: black;
+	font-size: 1.5em;
+	font-style: normal;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: justify;
+}
+
+#project-details-regions {
+	color: black;
+	font-size: 2em;
+	font-style: normal;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#project-details-title-header {
+	border: 2px solid black;
+	font-color: white;	
+}
+
+. project-thumbnail {
+	 min-height: 1000px;
+}
